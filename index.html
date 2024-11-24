@@ -453,6 +453,14 @@
                 grid-template-columns: repeat(2, 1fr);
             }
         }
+        @media (max-width: 768px) {
+            .works-grid {
+                margin-left: -47px;
+                /* Removes the centering on small screens */
+                justify-content: flex-start;
+                /* Aligns items to the left */
+            }
+        }
 
         @media (min-width: 768px) {
             .nav-links {

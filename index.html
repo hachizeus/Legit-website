@@ -32,7 +32,8 @@
                 <a href="#skills">Skills</a>
                 <a href="#contact">Contact</a>
             </div>
-            <a href="cover.pdf" class="hire-btn">Download CV</a>
+            <a href="resume.pdf" class="hire-btn" onclick="downloadCV(event)">Download CV</a>
+
         </div>
     </nav>
 
@@ -42,7 +43,7 @@
             <div class="hero-content">
                 <div class="hero-text" data-aos="fade-right">
                     <h2>I am Victor</h2>
-                    <h1>Software Developer + <span style="color: var(--purple-500)">UX Designer</span></h1>
+                    <h1>Full Stack Software Developer + <span style="color: var(--purple-500)">UX Designer</span></h1>
                     <p style="color: #9CA3AF">Fresh ideas for your next project. Let's work together to create something
                         amazing that will stand the test of time.</p>
                     <div class="hero-stats">
@@ -254,6 +255,16 @@
                 });
             });
         });
+        function downloadCV(event) {
+            event.preventDefault(); // Prevent default anchor behavior
+    
+            const link = document.createElement('a');
+            link.href = 'resume.pdf'; // Path to your CV file
+            link.download = 'Victors cv.pdf'; // Rename file if needed
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
     </script>
 </body>
 

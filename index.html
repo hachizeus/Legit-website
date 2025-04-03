@@ -244,20 +244,33 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title" data-aos="fade-up">Contact Me</h2>
-            <form class="contact-form" action="mailto:victorgathecha@gmail.com" method="POST" enctype="multipart/form-data">
-                <div class="form-grid">
-                    <input type="text" name="name" class="form-input" placeholder="Your Name" required>
-                    <input type="email" name="email" class="form-input" placeholder="Your Email" required>
-                </div>
-                <textarea name="message" class="form-input" placeholder="Your Message" required></textarea>
-                <button type="submit" class="hire1-btn">Send Message</button>
-            </form>
-        </div>
-    </section>
+ <!-- Contact Section -->
+<section id="contact" class="contact">
+    <div class="container">
+        <h2 class="section-title" data-aos="fade-up">Contact Me</h2>
+        <form class="contact-form" id="contactForm">
+            <div class="form-grid">
+                <input type="text" name="name" class="form-input" placeholder="Your Name" required>
+                <input type="email" name="email" class="form-input" placeholder="Your Email" required>
+            </div>
+            <div class="form-grid">
+                <select name="service" class="form-input" required>
+                    <option value="" disabled selected>Select a Service</option>
+                    <option value="Branding Design">Branding Design</option>
+                    <option value="UI/UX Design">UI/UX Design</option>
+                    <option value="Web Design">Web Design</option>
+                    <option value="App Design">App Design</option>
+                    <option value="Database Design">Database Design</option>
+                    <option value="Programming">Programming</option>
+                    <option value="Other">Other (Please specify in message)</option>
+                </select>
+                <input type="text" name="subject" class="form-input" placeholder="Subject" required>
+            </div>
+            <textarea name="message" class="form-input" placeholder="Your Message" required></textarea>
+            <button type="submit" class="hire1-btn">Send Message</button>
+        </form>
+    </div>
+</section>
 
     <script>
         // Initialize Feather Icons
@@ -305,6 +318,34 @@
             link.click();
             document.body.removeChild(link);
         }
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form values
+            const name = this.elements['name'].value;
+            const email = this.elements['email'].value;
+            const service = this.elements['service'].value;
+            const subject = this.elements['subject'].value;
+            const message = this.elements['message'].value;
+            
+            // Compose email components
+            const emailSubject = encodeURIComponent(subject);
+            const emailBody = encodeURIComponent(
+                `Hello Victor,\n\n` +
+                `I'm interested in your ${service} services.\n\n` +
+                `${message}\n\n` +
+                `Best regards,\n` +
+                `${name}\n` +
+                `Email: ${email}`
+            );
+            
+            // Open Gmail in new tab
+            const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=victorgathecha@gmail.com&su=${emailSubject}&body=${emailBody}`;
+            window.open(gmailUrl, '_blank');
+            
+            // Optional: Reset the form
+            this.reset();
+        });
     </script>
 </body>
 

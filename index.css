@@ -477,7 +477,32 @@ margin-bottom: 20px;
     border-color: var(--purple-500);
     box-shadow: var(--neon-glow);
 }
+/* Style for the select dropdown */
+select.form-input {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%238B5CF6'%3e%3cpath d='M7 10l5 5 5-5z'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 1em;
+    padding-right: 2.5rem;
+    cursor: pointer;
+}
 
+/* Style for dropdown options */
+select.form-input option {
+    background-color: var(--bg-dark);
+    color: white;
+    padding: 0.5rem;
+}
+
+/* Focus state for select */
+select.form-input:focus {
+    outline: none;
+    border-color: var(--purple-500);
+    box-shadow: var(--neon-glow);
+}
 textarea.form-input {
     min-height: 150px;
     resize: vertical;

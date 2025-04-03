@@ -1,4 +1,4 @@
-/* Base styles */
+     /* Base styles */
 :root {
     --purple-500: #8B5CF6;
     --purple-600: #7C3AED;
@@ -272,6 +272,47 @@ nav {
     box-shadow: var(--neon-glow);
 }
 
+/* Education Section */
+.education {
+    padding: 5rem 1rem;
+}
+
+.education-grid {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.education-item {
+    background: rgba(139, 92, 246, 0.1);
+    padding: 2rem;
+    border-radius: 1rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid rgba(139, 92, 246, 0.2);
+    backdrop-filter: blur(5px);
+    transition: all 0.3s ease;
+}
+
+.education-item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--neon-glow);
+}
+
+.education-year {
+    color: var(--purple-500);
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.education-degree {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.education-institution {
+    color: #9CA3AF;
+    font-style: italic;
+}
+
 /* Works Section */
 .works {
     padding: 5rem 1rem;
@@ -350,6 +391,19 @@ nav {
 .work-overlay p {
     font-size: 0.9rem;
     color: #9CA3AF;
+}
+video {
+    object-fit: cover; /* Ensures videos maintain aspect ratio */
+    max-width: 100%; /* Prevents overflow */
+}
+
+/* Optional: Play videos on hover instead of autoplay */
+.work-card video {
+    transition: opacity 0.3s ease;
+}
+
+.work-card:hover video {
+    opacity: 1;
 }
 
 /* Skills Section */

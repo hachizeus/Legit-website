@@ -16,6 +16,7 @@
             document.getElementById('contact-options').style.display = 'block';
         }
     </script>
+    
 </head>
 
 <body>
@@ -28,12 +29,12 @@
             <div class="nav-links">
                 <a href="#home">Home</a>
                 <a href="#services">Services</a>
+                <a href="#education">Education</a>
                 <a href="#works">Works</a>
                 <a href="#skills">Skills</a>
                 <a href="#contact">Contact</a>
             </div>
             <a href="resume.pdf" class="hire-btn" onclick="downloadCV(event)">Download CV</a>
-
         </div>
     </nav>
 
@@ -101,64 +102,88 @@
         </div>
     </section>
 
-    <!-- Recent Works -->
-    <section id="works" class="works">
+    <!-- Education Section -->
+    <section id="education" class="education">
         <div class="container">
-            <h2 class="section-title" data-aos="fade-up">My Recent Works</h2>
-            <div class="works-grid">
-                <div class="work-card" data-aos="fade-up" data-aos-delay="200">
-                    <video autoplay muted loop>
-                        <source src="1.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                    <div class="work-overlay">
-                        <h3>Online Store</h3>
-                        <p>Web Design</p>
-                    </div>
+            <h2 class="section-title" data-aos="fade-up">Education</h2>
+            <div class="education-grid">
+                <div class="education-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="education-year">2023</div>
+                    <div class="education-degree">Bachelor of Arts (B.A) in Information Science</div>
+                    <div class="education-institution">University of Nairobi - Nairobi, Kenya</div>
                 </div>
-                <div class="work-card" data-aos="fade-up" data-aos-delay="200">
-                    <video autoplay muted loop>
-                        <source src="car.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                    <div class="work-overlay">
-                        <h3>Luxury Automotive Excellence </h3>
-                        <p>Web Design</p>
-                    </div>
+                <div class="education-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="education-year">2025</div>
+                    <div class="education-degree">Power Learn Project - Software Engineering (Machine Learning, AI, Database Design)</div>
+                    <div class="education-institution">Online Program</div>
                 </div>
-                <div class="work-card" data-aos="fade-up" data-aos-delay="200">
-                    <video autoplay muted loop>
-                        <source src="art.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                    <div class="work-overlay">
-                        <h3>NFT's</h3>
-                        <p>Web Design</p>
-                    </div>
-                </div>
-                <div class="work-card" data-aos="fade-up" data-aos-delay="200">
-                    <video autoplay muted loop>
-                        <source src="7.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                    <div class="work-overlay">
-                        <h3>pattrentals</h3>
-                        <p>Web Design</p>
-                    </div>
-                </div>
-                <div class="work-card" data-aos="fade-up" data-aos-delay="200">
-                    <video autoplay muted loop>
-                        <source src="4.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                    <div class="work-overlay">
-                        <h3>Back-end</h3>
-                        <p>Back-end Design</p>
-                    </div>
+                <div class="education-item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="education-year">2024</div>
+                    <div class="education-degree">Certificate of Higher Education in Software and Mobile App Development (MIT Intermediate)</div>
+                    <div class="education-institution">Inceptor Institute - Nairobi, Kenya</div>
                 </div>
             </div>
         </div>
     </section>
+
+   <!-- Recent Works -->
+<section id="works" class="works">
+    <div class="container">
+        <h2 class="section-title" data-aos="fade-up">My Recent Works</h2>
+        <div class="works-grid">
+            <div class="work-card" data-aos="fade-up" data-aos-delay="200">
+                <video muted loop preload="metadata" loading="lazy" width="300" height="200" poster="1-poster.jpg">
+                    <source src="1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="work-overlay">
+                    <h3>Online Store</h3>
+                    <p>Web Design</p>
+                </div>
+            </div>
+            <div class="work-card" data-aos="fade-up" data-aos-delay="200">
+                <video muted loop preload="metadata" loading="lazy" width="300" height="200" poster="car-poster.jpg">
+                    <source src="car.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="work-overlay">
+                    <h3>Luxury Automotive Excellence</h3>
+                    <p>Web Design</p>
+                </div>
+            </div>
+            <div class="work-card" data-aos="fade-up" data-aos-delay="200">
+                <video muted loop preload="metadata" loading="lazy" width="300" height="200" poster="art-poster.jpg">
+                    <source src="art.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="work-overlay">
+                    <h3>NFT's</h3>
+                    <p>Web Design</p>
+                </div>
+            </div>
+            <div class="work-card" data-aos="fade-up" data-aos-delay="200">
+                <video muted loop preload="metadata" loading="lazy" width="300" height="200" poster="7-poster.jpg">
+                    <source src="7.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="work-overlay">
+                    <h3>pattrentals</h3>
+                    <p>Web Design</p>
+                </div>
+            </div>
+            <div class="work-card" data-aos="fade-up" data-aos-delay="200">
+                <video muted loop preload="metadata" loading="lazy" width="300" height="200" poster="4-poster.jpg">
+                    <source src="4.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="work-overlay">
+                    <h3>Back-end</h3>
+                    <p>Back-end Design</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
     <!-- Skills Section -->
     <section id="skills" class="skills">
@@ -199,6 +224,21 @@
                     <i data-feather="code"></i>
                     <h3>Node.js</h3>
                     <p style="color: var(--purple-500)">82%</p>
+                </div>
+                <div class="skill-item" data-aos="fade-up" data-aos-delay="800">
+                    <i data-feather="cpu"></i>
+                    <h3>Machine Learning</h3>
+                    <p style="color: var(--purple-500)">80%</p>
+                </div>
+                <div class="skill-item" data-aos="fade-up" data-aos-delay="900">
+                    <i data-feather="activity"></i>
+                    <h3>Artificial Intelligence</h3>
+                    <p style="color: var(--purple-500)">78%</p>
+                </div>
+                <div class="skill-item" data-aos="fade-up" data-aos-delay="1000">
+                    <i data-feather="database"></i>
+                    <h3>Database Design</h3>
+                    <p style="color: var(--purple-500)">85%</p>
                 </div>
             </div>
         </div>
